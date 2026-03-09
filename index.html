@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buddy – Privacy Policy</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f9f9f9;
+      color: #222;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 10px;
+      padding: 48px 48px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    }
+    h1 { font-size: 1.8rem; margin-bottom: 4px; color: #1a1a2e; }
+    .subtitle { font-size: 0.9rem; color: #888; margin-bottom: 36px; }
+    h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin: 28px 0 8px;
+      color: #1a1a2e;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    p, li { font-size: 0.95rem; line-height: 1.7; color: #444; }
+    p + p { margin-top: 10px; }
+    ul { padding-left: 20px; margin-top: 6px; }
+    li { margin-bottom: 4px; }
+    .highlight {
+      background: #f0f4ff;
+      border-left: 3px solid #4a6cf7;
+      padding: 12px 16px;
+      border-radius: 4px;
+      margin-top: 12px;
+      font-size: 0.92rem;
+      color: #333;
+    }
+    .contact {
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid #eee;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .contact a { color: #4a6cf7; text-decoration: none; }
+    @media (max-width: 600px) { .container { padding: 32px 24px; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h1>Buddy — Privacy Policy</h1>
+    <p class="subtitle">Yasakarï Productions &nbsp;·&nbsp; Last updated: March 2026</p>
+
+    <p>Buddy is a congregation management tool developed by Yasakarï Productions. This policy explains precisely what data is collected, where it is stored, and how it is protected.</p>
+
+    <h2>1. How Publisher Data Enters the App</h2>
+    <p>Personal publisher information — including full names, date of birth, baptism date, gender, and congregation roles — is entered exclusively through an encrypted import file (BPUB format) or manually by an administrator. This data is <strong>never collected automatically</strong> and is not sourced from any online service.</p>
+
+    <h2>2. What Stays on the Device Only</h2>
+    <p>The following data in connection with reporting is stored exclusively in an AES-256 encrypted local database on the device and is <strong>never uploaded to any server</strong>:</p>
+    <ul>
+      <li>First Name and Last Name</li>
+      <li>Date of birth</li>
+      <li>Baptism date</li>
+    </ul>
+    <div class="highlight">
+      This data never leaves the device. It cannot be accessed remotely under any circumstances.
+    </div>
+
+    <h2>3. What Is Uploaded — and How It Is Protected</h2>
+    <p>Two categories of data are synchronised to the cloud to allow multi-device use within the same congregation:</p>
+
+    <p><strong>Contact information (names &amp; phone numbers)</strong><br/>
+    Names and phone numbers are uploaded to Firebase Firestore, but are <strong>encrypted with AES-256 before leaving the device</strong>. The data arrives in Firebase as a single opaque encrypted blob — no readable fields exist in the cloud. Additionally, the link between a publisher's identity and their contact record is <strong>never uploaded</strong> and exists only in the local database. This means that even with direct access to the Firebase data, it is not possible to associate a contact entry with a specific person without both the device's local database and the congregation's private encryption key.</p>
+
+    <p><strong>Service activity reports</strong><br/>
+    Monthly activity data (reporting activity and studies) is uploaded to Firebase and is also <strong>fully encrypted with AES-256 before upload</strong>. Only an internal anonymous identifier is stored alongside the encrypted record in the cloud — no name or personal detail is included in plaintext.</p>
+
+    <div class="highlight">
+      All cloud-stored data is encrypted using a congregation-specific AES-256 key held securely on-device. Data in Firebase is unreadable without this key.
+    </div>
+
+    <h2>4. Access Control</h2>
+    <p>Only authenticated users belonging to the same congregation can access synced data. Access is role-based:</p>
+    <ul>
+      <li><strong>Role 4 (Secretary):</strong> Full access.</li>
+      <li><strong>Role 3:</strong> (Service Overseer) Editable Territory page.</li>
+      <li><strong>Role 2 / 2A:</strong> Contact information only.</li>
+      <li><strong>Role 1:</strong>Presently: Disabled role</li>
+    </ul>
+
+    <h2>5. Data Sharing</h2>
+    <p>Buddy does <strong>not</strong> sell, share, rent, or disclose any data to third parties. Data is never used for advertising, analytics, or any purpose beyond congregation management.</p>
+
+    <h2>6. Third-Party Services</h2>
+    <p>Buddy uses Firebase (Google) solely for authentication and encrypted cloud sync between devices within the same congregation. This is governed by <a href="https://firebase.google.com/support/privacy" target="_blank">Google's Privacy Policy</a>.</p>
+
+    <h2>7. Data Retention &amp; Deletion</h2>
+    <p>Data is retained as long as the congregation uses the app. A Role 4 administrator can delete any record at any time, which removes it from both the local database and Firebase.</p>
+
+    <h2>8. Minors</h2>
+    <p>Buddy is intended exclusively for adult congregation members. This application is not used by minors.</p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>If this policy changes materially, users will be notified via an in-app notice on next login.</p>
+
+    <div class="contact">
+      <strong>Contact</strong><br/>
+      For questions or data requests, contact:<br/>
+      <a href="mailto:benribrinki@gmail.com">benribrinki@gmail.com</a>
+    </div>
+
+  </div>
+</body>
+</html>
