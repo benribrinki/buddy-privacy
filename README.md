@@ -1,0 +1,2 @@
+# buddy-privacy
+Privacy Policy
